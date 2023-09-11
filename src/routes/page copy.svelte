@@ -44,12 +44,12 @@
                     </div>
 					<div>
 						<span
-							class="inline-flex items-center px-3 py-1 rounded-full text-xs  bg-green-100 text-gray-400 font-semibold text-white"
+							class="inline-flex items-center px-3 py-1 rounded-full text-xs  bg-green-100 text-gray-400 font-semibold "
 						>
 							friend
 						</span>
                         <span
-							class="inline-flex items-center px-3 py-1 rounded-full text-xs  bg-green-100 text-gray-400 font-semibold text-white"
+							class="inline-flex items-center px-3 py-1 rounded-full text-xs  bg-green-100 text-gray-400 font-semibold "
 						>
 							family
 						</span>
@@ -79,7 +79,7 @@
 							friend
 						</span>
                         <span
-							class="inline-flex items-center px-3 py-1 rounded-full text-xs  bg-green-100 text-gray-400 font-semibold text-white"
+							class="inline-flex items-center px-3 py-1 rounded-full text-xs  bg-green-100 text-gray-400 font-semibold "
 						>
 							family
 						</span>
@@ -104,12 +104,12 @@
                     </div>
 					<div>
 						<span
-							class="inline-flex items-center px-3 py-1 rounded-full text-xs  bg-green-100 text-gray-400 font-semibold text-white"
+							class="inline-flex items-center px-3 py-1 rounded-full text-xs  bg-green-100 text-gray-400 font-semibold "
 						>
 							friend
 						</span>
                         <span
-							class="inline-flex items-center px-3 py-1 rounded-full text-xs  bg-green-100 text-gray-400 font-semibold text-white"
+							class="inline-flex items-center px-3 py-1 rounded-full text-xs  bg-green-100 text-gray-400 font-semibold "
 						>
 							family
 						</span>
@@ -134,12 +134,12 @@
                     </div>
 					<div>
 						<span
-							class="inline-flex items-center px-3 py-1 rounded-full text-xs  bg-green-100 text-gray-400 font-semibold text-white"
+							class="inline-flex items-center px-3 py-1 rounded-full text-xs  bg-green-100 text-gray-400 font-semibold "
 						>
 							friend
 						</span>
                         <span
-							class="inline-flex items-center px-3 py-1 rounded-full text-xs  bg-green-100 text-gray-400 font-semibold text-white"
+							class="inline-flex items-center px-3 py-1 rounded-full text-xs  bg-green-100 text-gray-400 font-semibold "
 						>
 							family
 						</span>
@@ -164,12 +164,12 @@
                     </div>
 					<div>
 						<span
-							class="inline-flex items-center px-3 py-1 rounded-full text-xs  bg-green-100 text-gray-400 font-semibold text-white"
+							class="inline-flex items-center px-3 py-1 rounded-full text-xs  bg-green-100 text-gray-400 font-semibold "
 						>
 							friend
 						</span>
                         <span
-							class="inline-flex items-center px-3 py-1 rounded-full text-xs  bg-green-100 text-gray-400 font-semibold text-white"
+							class="inline-flex items-center px-3 py-1 rounded-full text-xs  bg-green-100 text-gray-400 font-semibold "
 						>
 							family
 						</span>

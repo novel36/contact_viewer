@@ -1,7 +1,6 @@
 <script>
 	// @ts-nocheck
 	import vCard, { parse } from 'vcf';
-	import { PrismaClient } from '@prisma/client';
 	let utf8decoder = new TextDecoder();
 	// @ts-ignore
 
@@ -11,25 +10,6 @@
 	 * @type {any[]}
 	 */
 	let jsonData = [];
-	const prisma = new PrismaClient();
-
-	async function addJsonDataToPrisma(jsonData) {
-  try {
-    const contacts = jsonData.map(contact => ({
-      fn: contact.fn,
-      tel: contact.tel,
-      photo: contact.photo
-    }));
-
-    await prisma.contact.createMany({ data: contacts });
-
-    console.log('Data stored successfully!');
-  } catch (error) {
-    console.error('Error storing data:', error);
-  } finally {
-    await prisma.$disconnect();
-  }
-}
 
 	// @ts-ignore
 	async function parseVCF(file) {
@@ -60,7 +40,7 @@
 					}
 
 					const obj = {
-						name: decodedFn,
+						fn: decodedFn,
 						tel: v.data['tel'] ? v.data['tel']._data : '',
 						photo: v.data['photo'] ? v.data['photo']._data : ''
 					};
@@ -69,10 +49,8 @@
 				});
 
 				jsonData.forEach((v) => {
-					console.log(v['name']);
+					console.log(v['fn']);
 				});
-				addJsonDataToPrisma(jsonData);
-				
 			};
 
 			reader.onerror = (event) => {
@@ -110,7 +88,6 @@
 		parseVCF(file);
 	}
 </script>
-
 <div class="text-center">
 	<h1 class="text-center font-semibold text-3xl py-6">Contact</h1>
 
@@ -160,11 +137,19 @@
 	>
 	<p>{jsonData.length}</p>
 	{#if jsonData.length > 0}
-		<div class="mt-4 w-1/3 px-6 mx-auto">
-			<p class="text-sm font-semibold">Parsed contacts:</p>
-			
-		</div>
-	{:else}
-		<p>No contacts found.</p>
-	{/if}
+  <div class="mt-4 w-1/3 px-6 mx-auto">
+    <p class="text-sm font-semibold">Parsed contacts:</p>
+    <div>
+      {#each jsonData as contact (contact.fn)}
+        <div class="flex flex-row space-x-5 justify-evenly py-2">
+          <div class="shadow-sm flex-1 p-3 rounded-md">{contact.fn}</div>
+          <div class="shadow-sm flex-1 p-3 rounded-md">{contact.tel}</div>
+        </div>
+      {/each}
+    </div>
+  </div>
+{:else}
+  <p>No contacts found.</p>
+{/if}
+	
 </div>
